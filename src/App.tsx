@@ -20,6 +20,7 @@ const App = () => {
     { floor: 5, stop: false },
   ]);
 
+  //  geeft aan bij welke etages de lift moet stoppen
   const addToQueue = (floor: number) => {
     if (currentFloor !== floor || direction !== "still") {
       setFloors(
@@ -42,6 +43,10 @@ const App = () => {
     return new Promise((resolve) => setTimeout(resolve, ms));
   };
 
+  /*  Als er wordt aangegeven dat de lift ergens moet stoppen en er is nog geen destination dan 
+      wordt er een destination gekozen. Als er al een destination is dan wordt de hoogste of laagste 
+      etage gekozen als destination op basis van welke richting de lift beweegt.
+  */
   useEffect(() => {
     if (destination === undefined) {
       for (let i = 0; i < floors.length; i++) {
@@ -77,6 +82,7 @@ const App = () => {
     }
   }, [currentFloor]);
 
+  //  beweegt de lift naar boven of beneden op basis van destination
   useEffect(() => {
     if (destination !== undefined) {
       if ((destination as number) > currentFloor) {
