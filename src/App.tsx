@@ -12,12 +12,12 @@ const App = () => {
   const [destination, setDestination] = useState<number | undefined>();
 
   const [floors, setFloors] = useState<floor[]>([
-    { floor: 0, stop: false, isHere: true },
-    { floor: 1, stop: false, isHere: false },
-    { floor: 2, stop: false, isHere: false },
-    { floor: 3, stop: false, isHere: false },
-    { floor: 4, stop: false, isHere: false },
-    { floor: 5, stop: false, isHere: false },
+    { floor: 0, stop: false },
+    { floor: 1, stop: false },
+    { floor: 2, stop: false },
+    { floor: 3, stop: false },
+    { floor: 4, stop: false },
+    { floor: 5, stop: false },
   ]);
 
   const addToQueue = (floor: number) => {
@@ -68,14 +68,6 @@ const App = () => {
   }, [floors]);
 
   useEffect(() => {
-    setFloors(
-      floors.map((n) =>
-        n.floor === currentFloor
-          ? { ...n, isHere: true }
-          : { ...n, isHere: false }
-      )
-    );
-
     if (floors[currentFloor].stop) {
       setFloors(
         floors.map((n) =>
