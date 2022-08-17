@@ -1,0 +1,44 @@
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.outside {
+  margin-right: 10px;
+}
+
+.outside__button {
+  font-size: 25px;
+  display: flex;
+  cursor: pointer;
+}
+
+.floors {
+  border-radius: 15px;
+  background: #4c4c68;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.floors__floor {
+  padding-top: 10px;
+  font-size: 25px;
+  color: white;
+}
+
+.button {
+  font-size: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 25px;
+  color: #13b38b;
+  margin: 10px;
+  margin-top: 30px;
+}

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:wght@500&display=swap");
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #e6e6eb;
+  font-family: "Roboto";
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 10px;
+  color: #13b38b;
+}
